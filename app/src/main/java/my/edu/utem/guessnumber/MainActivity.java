@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initialiazeGame() {
-        number = (int)(Math.random()*100);
+        number = (int)(Math.random()*5);
         numberOfTries = 3;
         gameOn = true;
         ansTextView.setText("");
@@ -49,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
             numberOfTries --;
 
             if (Integer.parseInt(guessEdit.getText().toString()) > number) {
+                if(numberOfTries != 0){
+                Toast.makeText(MainActivity.this, "You have another "+(numberOfTries)+(" chances"), Toast.LENGTH_LONG).show();
                 ansTextView.setText("The number is too big");
+                }
+
             }
 
             else if (Integer.parseInt(guessEdit.getText().toString()) < number) {
