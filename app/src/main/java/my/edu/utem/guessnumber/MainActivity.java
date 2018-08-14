@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             else {
-                Toast.makeText(MainActivity.this, "The number is correct", Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "The number is correct", Toast.LENGTH_LONG).show();
                 ansTextView.setText("Congratulation you win");
                 gameOn = false;
                 resetBtn.setVisibility(View.VISIBLE);
